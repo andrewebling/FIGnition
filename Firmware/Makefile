@@ -173,8 +173,8 @@ FIGnition.hex: FIGnition.elf
 	rm -f FIGnition.hex
 	avr-objcopy -j .text -j .fth -j .data -O ihex FIGnition.elf FIGnition.hex
 
-$(OBJDIR)FigForthHi.o : $(SRCDIR)FigForth.S  $(HEADERS)
-	$(COMPILE) -DRamBase=0xa000 -DBigSymbFix -x assembler-with-cpp -c $< -o $@
+# $(OBJDIR)FigForthHi.o : $(SRCDIR)FigForth.S  $(HEADERS)
+#	$(COMPILE) -DRamBase=0xa000 -DBigSymbFix -x assembler-with-cpp -c $< -o $@
 
 #ForthHiHack.o : ForthHiHack.c  $(INCDIR)CoreDefs.h
 #	$(COMPILE) -DRamBase=0xa000 -c $< -o $@
